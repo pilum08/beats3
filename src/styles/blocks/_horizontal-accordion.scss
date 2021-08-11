@@ -1,0 +1,79 @@
+.horizontal-accordion {
+    flex-direction: row;
+    background: url("../../images/SliderBG.png")center center/cover no-repeat;
+    justify-content: flex-end;
+    position: relative;
+    &__wrapper {
+        display: flex;
+    }
+    &__content {
+        display: flex;
+    }
+    &__title {
+        position: absolute;
+        top: 13%;
+        left: 4%;
+        @include phones {
+            left: 3%;
+        }
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        display: flex;
+        z-index: 1;
+        &--phone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+    }
+    &__link {
+        display: flex;
+        width: 6.38rem;
+        justify-content: center;
+        &--grey {
+            background-color: #999;
+        }
+        &--black {
+            background-color: #151515;
+        }
+        &--red {
+            background-color: #E01F3C;
+        }
+        &-text {
+            font-family: "Alegreya Sans", sans-serif;
+            color: #fff;
+            transform: rotate(180deg);
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+            font-size: 36px;
+            font-weight: 700;
+            padding-top: 2.13rem;
+        }
+    }
+    &__text {
+        width: 0;
+        overflow: hidden;
+        background-color: #333537E5;
+        transition: 400ms;
+        &-content {
+            max-width: 32.75rem;
+            color: #fff;
+            padding-top: 1.94rem;
+            padding-left: 2.38rem;
+            padding-right: 3.31rem;
+            font-size: 1rem;
+            @include tablets {
+                font-size: 1.07rem;
+            }
+            @include phones {
+                font-size: 1.14rem;
+            }
+        }
+    }
+}

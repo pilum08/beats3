@@ -1,0 +1,21 @@
+﻿.feature {
+    display: flex;
+    max-width: 10.38rem;
+    margin-right: 0.5rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    margin-bottom: 5%;
+}
+
+.feature__icon {
+    display: inline-flex;
+    width: 2.56rem;
+    margin-right: 0.69rem;
+}
+
+.feature__text {
+    display: inline-flex;
+    color: $black;
+    line-height: 1.1;
+}

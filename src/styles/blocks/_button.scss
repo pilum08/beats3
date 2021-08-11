@@ -1,0 +1,32 @@
+﻿.btn {
+    font-weight: 700;
+    border-radius: 2.19rem;
+    font-size: 16px;
+    line-height: 1.19rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 21px 41px;
+    &--red {
+        color: #fff;
+        background-color: #e01f3d;
+        &:hover {
+            background: #CA1B36;
+            transition: 400ms;
+        }
+    }
+    &--transparent {
+        background: transparent;
+        text-transform: none;
+        color: #e01f3d;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0 0.4rem 0 0.94rem;
+        &:hover {
+            color: #fff;
+            transition: 400ms;
+        }
+        @include phones {
+            padding-left: 1.54rem;
+        }
+    }
+}

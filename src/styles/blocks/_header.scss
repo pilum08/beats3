@@ -1,0 +1,24 @@
+﻿.header {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: $black;
+    margin-top: 1.5rem;
+    margin-right: 1.56rem;
+    @include tablets {
+        width: 95vw;
+        align-self: center;
+        margin-right: 0;
+        align-items: center
+    }
+    @include phones {
+        width: 98vw;
+    }
+}
+
+.tel-number.header__tel-number {
+    @include tablets {
+        display: none;
+    }
+}

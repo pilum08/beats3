@@ -1,0 +1,57 @@
+﻿.footer-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.footer-container {
+    max-height: 5.38rem;
+    @include phones {
+        max-height: 10.79rem;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 5.38rem;
+    min-width: 100%;
+    &__contacts {
+        flex: 1;
+        @include phones {
+            text-align: center;
+            margin-bottom: 1.36rem;
+        }
+    }
+    align-items: center;
+    @include tablets {
+        padding: 0 3%;
+    }
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        padding: 0.9rem 0;
+    }
+    &__adress {
+        font-size: 1.29rem;
+        color: #000;
+        @include phones {
+            margin-bottom: 0.7rem;
+        }
+    }
+    &__tel-number {
+        @include tablets {
+            padding: 0;
+        }
+    }
+    &__tel-number-icon {
+        @include tablets {
+            fill: #E01F3D;
+        }
+        @include phones {
+            fill: #292929;
+        }
+    }
+}

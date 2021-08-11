@@ -1,0 +1,9 @@
+﻿.features {
+    display: flex;
+    margin-bottom: 3.13rem;
+    margin-left: 15px;
+    transform: translateY(-350%);
+    @include tablets {
+        display: none;
+    }
+}

@@ -1,0 +1,5 @@
+﻿.delivery-container {
+    @include phones{
+        padding: 0 0.71rem;
+    }
+}

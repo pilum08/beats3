@@ -1,0 +1,50 @@
+.advantage {
+    text-align: center;
+    @include phones {
+        text-align: left;
+    }
+    &__image {
+        display: flex;
+        justify-content: center;
+        @include phones {
+            margin-right: 12px;
+        }
+    }
+    &__image-wrapper {
+        display: block;
+        position: relative;
+        background: #F2F5F4;
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        margin-bottom: 1.56rem;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__text {
+        @include phones {
+            padding-top: 0.8rem;
+        }
+    }
+    &__description {
+        @include tablets {
+            font-size: 1.07rem;
+            line-height: 1.15;
+        }
+        @include phones {
+            font-size: 1.14rem;
+        }
+        
+    }
+
+}
+
+
+
+
+

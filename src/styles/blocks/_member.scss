@@ -1,0 +1,113 @@
+.member {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.25rem;
+    min-height: 27.5rem;
+    @include tablets {
+        min-height: auto;
+        margin-right: 0;
+        flex: none;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &__img-wrapper {
+        max-width: 13.75rem;
+        max-height: 18.13rem;
+        overflow: hidden;
+        margin-bottom: 1.63rem;
+        @include tablets {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            max-width: 14.8rem;
+            max-height: 19.33rem;
+        }
+        @include phones {
+            display: flex;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    &__img {
+        object-fit: contain;
+        height: 100%;
+    }
+    &__content {
+        text-align: center;
+    }
+    &__name {
+        position: relative;
+        font-size: 1.13rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 0.69rem;
+        @include tablets {
+            font-size: 1.27rem;
+        }
+        &--closed {
+            &::after {
+                content: "";
+                background: url(../../images/tr.svg) no-repeat;
+                width: 0.56rem;
+                height: 0.56rem;
+                position: absolute;
+                bottom: 21%;
+                right: -10%;
+                display: flex;
+                transform: rotate(180deg);
+                @include tablets {
+                    bottom: 32%;
+                }
+            }
+        }
+        &--open {
+            &::before {
+                content: "";
+                background: url(../../images/tr.svg) no-repeat;
+                width: 0.56rem;
+                height: 0.56rem;
+                position: absolute;
+                bottom: 21%;
+                right: -10%;
+                display: flex;
+                @include tablets {
+                    bottom: 32%;
+                }
+            }
+        }
+        @include tablets {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            font-size: 21px;
+        }
+    }
+    &__dropdown {
+        display: none;
+        overflow: hidden;
+        &--active {
+            display: block;
+        }
+        @include tablets {
+            max-width: 14.8rem;
+        }
+        @include phones {
+            max-width: 23.5rem;
+        }
+    }
+    &__position {
+        color: #292929;
+        margin-bottom: 0.25rem;
+        @include tablets {
+            color: #292929;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+    }
+    &__desc {
+        color: #666;
+    }
+}

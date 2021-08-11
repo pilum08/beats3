@@ -1,0 +1,20 @@
+.section {
+    height: 100%;
+    min-height: 40.63rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.delivery-section {
+    background: url(../../images/formBg.png) center center/cover no-repeat;
+    @include tablets {
+        padding-top: 5.8rem;
+    }
+}
+
+.map-section {
+    @include phones {
+        max-height: 100vh;
+    }
+}

@@ -1,0 +1,58 @@
+﻿@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+
+
+/*@media (max-width: 768px) {
+   
+   
+    
+   
+    .heading__subtitle {
+        padding: 0 14%;
+    }
+   
+    }
+    .reviews__content {
+        max-width: 95vw;
+    }
+    
+    .reviews__text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11px;
+    }
+    body {
+        font-size: 1.45rem;
+    }
+    .hero__title-wrapper {
+        width: 100%;
+    }
+    .hero__text {
+        width: 63%;
+    }
+}
+
+@media (max-height: 480px) {
+    .hero__bg {
+        transform: translate(2%, -2%);
+    }
+    .hero__content-text {
+        transform: translateY(-150%);
+    }
+    .features {
+        transform: translateY(-443%);
+    }
+}*/

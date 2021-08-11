@@ -1,0 +1,24 @@
+﻿.social-network {
+    min-width: 7.5rem;
+    display: inline-flex;
+    justify-content: space-between;
+    @include phones {
+        flex: 1;
+    }
+    &__icon {
+        height: 1.87rem;
+        width: 1.87rem;
+        fill: #B3B3B3;
+        &:hover {
+            fill: #000;
+            transition: 400ms;
+        }
+    }
+}
+
+.social-network__item {
+    margin-right: 0.63rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}

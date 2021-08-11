@@ -1,0 +1,87 @@
+.radio {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    &:last-child {
+        margin-right: 0;
+        margin-bottom: 2.75rem;
+    }
+    @include phones {
+        margin-right: 1.2rem;
+        margin-bottom: 1.9rem;
+        &:last-child {
+            margin-bottom: 2.2rem;
+        }
+    }
+}
+
+.radio__elem {
+    display: none;
+}
+
+.radio__desc {
+    user-select: none;
+    @include tablets {
+        font-size: 1.07rem;
+    }
+    @include phones {
+        font-size: 1.14rem;
+    }
+}
+
+.radio__visible {
+    height: 1.56rem;
+    width: 1.56rem;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 0.63rem;
+    @include phones {
+        height: 1.71rem;
+        width: 1.71rem;
+    }
+    &::after {
+        content: "";
+        display: none;
+        position: absolute;
+        height: 0.81rem;
+        width: 0.81rem;
+        border-radius: 50%;
+        background: #E01F3D;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.radio__elem:checked~.radio__visible::after {
+    display: block;
+}
+
+.radio__visible--checkbox {
+    border-radius: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 4px;
+    @include phones {
+        height: 1.71rem;
+        width: 1.71rem;
+    }
+    &::before {
+        content: url(../../images/checkmark.svg);
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.radio__elem:checked~.radio__visible--checkbox::after {
+    display: none;
+}
+
+.radio__elem:checked~.radio__visible--checkbox::before {
+    display: block;
+}

@@ -1,0 +1,15 @@
+﻿.arrow {
+    height: 19px;
+    width: 19px;
+    border: 2px solid #000;
+    border-right: transparent;
+    border-bottom: transparent;
+    &__right {
+        transform: rotate(135deg);
+    }
+    
+    &__left {
+        transform: rotate(-45deg);
+    }
+
+}

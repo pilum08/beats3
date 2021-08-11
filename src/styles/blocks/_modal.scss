@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #313131;
+    z-index: 300;
+    &__window {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 19.31rem;
+        height: 11rem;
+        background: #fff;
+    }
+    &__message {
+        font-size: 1.13rem;
+        color: #000;
+        margin-bottom: 4.13rem;
+        text-align: center;
+    }
+    .error-modal {
+        color: #E01F3D;
+    }
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 1 !important;
+}
+
+.fancybox-button,
+.fancybox-close-small {
+    display: none !important;
+}

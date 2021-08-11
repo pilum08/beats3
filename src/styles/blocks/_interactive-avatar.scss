@@ -1,0 +1,31 @@
+﻿.interactive-avatar {
+    height: 4.63rem;
+    width: 4.63rem;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    &--active {
+        border-color: #E01F3D;
+    }
+    &:hover {
+        border-color: #E01F3D;
+        transition: 300ms;
+    }
+}
+
+.interactive-avatar__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+}
+
+.interactive-avatar__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

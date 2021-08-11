@@ -1,0 +1,122 @@
+﻿    .reviews-section {
+        position: relative;
+        &::after {
+            content: url('../../images/Rew-el.svg');
+            position: absolute;
+            top: 98%;
+            left: 10%;
+            display: block;
+            z-index: 1;
+        }
+    }
+    
+    .reviews {
+        @include tablets {
+            margin-bottom: 5.8rem;
+        }
+        &__list {
+            background: #f8faf9;
+            padding: 2.95rem 2.49rem 3.13rem;
+            position: relative;
+            margin-bottom: 18.7px;
+            min-height: 22.56rem;
+            @include tablets {
+                padding: 3.65rem 2.49rem 3.13rem;
+            }
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                border-top: 2.63rem solid transparent;
+                border-right: 2.63rem solid #fff;
+                border-left: 2.63rem solid transparent;
+                border-bottom: 2.63rem solid #fff;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 94%;
+                left: 45%;
+                transform: rotateZ(45deg);
+            }
+        }
+        &__item.active {
+            position: static;
+            opacity: 1;
+            pointer-events: unset;
+            z-index: 20;
+        }
+        &__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            pointer-events: none;
+            &--active {
+                position: static;
+                pointer-events: unset;
+                opacity: 1;
+            }
+        }
+        &__content-inner {
+            display: flex;
+            @include tablets {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        &__avatar {
+            width: 15.81rem;
+            height: 16.5rem;
+            margin-right: 2.13rem;
+            @include tablets {
+                margin-right: 0;
+                width: 130px;
+                height: 130px;
+            }
+        }
+        &__article {
+            flex: 1;
+            margin-top: 1.94rem;
+        }
+        &__text {
+            max-width: 31.13rem;
+            margin-bottom: 1.25rem;
+            @include tablets {
+                max-width: 100%;
+                font-size: 1.07rem;
+            }
+            @include phones {
+                font-size: 1.14rem;
+                line-height: 1.16;
+            }
+        }
+        &__name {
+            color: #292929;
+            font-weight: 700;
+            font-size: 1.13rem;
+            @include phones {
+                font-weight: 400;
+                font-size: 1.29rem;
+            }
+        }
+        &__selector {
+            display: flex;
+            justify-content: center;
+        }
+        &__selector-item {
+            margin-right: 0.38rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    
+    .small-reviews-title {
+        margin-bottom: 1.5rem;
+        @include phones {
+            font-size: 1.71rem;
+        }
+    }

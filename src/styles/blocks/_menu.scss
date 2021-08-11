@@ -1,0 +1,39 @@
+﻿.menu {
+    @include tablets {
+        display: none;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Alegreya Sans", sans-serif;
+        font-size: 1.13rem;
+        margin: 0 20px;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    &__item {
+        margin-right: 1.69rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        padding-bottom: 10px;
+    }
+    &__link {
+        white-space: nowrap;
+    }
+    &--vertical {
+        display: block;
+        align-self: center;
+        justify-self: center;
+    }
+    &--vertical .menu__list {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        flex-direction: column;
+        color: #FFFFFF;
+        font-size: 2.4rem;
+        line-height: 2;
+        font-family: "Play", Arial, Helvetica, sans-serif;
+    }
+}

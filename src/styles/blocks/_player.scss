@@ -1,0 +1,371 @@
+.player {
+    background-color: #f8faf9;
+    position: relative;
+    &::after {
+        content: url("../../images/yt-pent.svg");
+        position: absolute;
+        top: 96.5%;
+        left: 80%;
+        display: block;
+    }
+    &__container {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        width: 41.39rem;
+        position: relative;
+        @include tablets {
+            width: 39.6rem;
+            height: 23.55rem;
+        }
+        @include phones {
+            max-width: 28.14rem;
+            max-height: 16.66rem;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        cursor: pointer;
+    }
+    &__content {
+        width: 41.39rem;
+        height: 24.5rem;
+        @include tablets {
+            width: 39.6rem;
+            height: 23.55rem;
+        }
+        @include phones {
+            width: 28.14rem;
+            height: 16.66rem;
+        }
+    }
+    &__on-screen-start {
+        position: absolute;
+        cursor: pointer;
+        width: 3.04rem;
+        height: 4.43rem;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% -50%);
+        object-fit: contain;
+        @include tablets {
+            top: 30%;
+            left: 45%;
+            width: 4.49rem;
+            height: 6.56rem;
+        }
+        @include phones {
+            width: 3.19rem;
+            height: 4.66rem;
+        }
+        &--hidden {
+            opacity: 0;
+            transition: 200ms;
+        }
+    }
+    &__sound-img {
+        position: relative;
+        &-line {
+            display: none;
+            left: -1px;
+            top: 7px;
+            position: absolute;
+            height: 2px;
+            width: 1.31rem;
+            background: #e01f3d;
+            transform: rotate(130deg);
+            @include tablets {
+                top: 6px;
+                width: 1.13rem;
+            }
+            @include phones {
+                width: 1rem;
+            }
+        }
+        @include tablets {
+            width: 1.01rem;
+            height: 1.03rem;
+        }
+        @include phones {
+            width: 0.65rem;
+            height: 0.88rem;
+        }
+    }
+    &__sound-ico {
+        @include tablets {
+            width: 1.01rem;
+            height: 1.03rem;
+        }
+        @include phones {
+            width: 0.65rem;
+            height: 0.88rem;
+        }
+    }
+    &__sound-volume {
+        @include tablets {
+            width: 3.71rem;
+            height: 0.3rem;
+        }
+        @include phones {
+            width: 2.63rem;
+            height: 0.21rem;
+        }
+    }
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: -0.75rem;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 2.18rem;
+        background-color: #151515;
+        @include tablets {
+            bottom: -0.45rem;
+        }
+        @include phones {
+            height: 1.58rem;
+        }
+    }
+    &__playback {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &-duration {
+            width: 27.63rem;
+            height: 0.25rem;
+            &::-webkit-slider-runnable-track {
+                height: 0.25rem;
+                @include tablets {
+                    height: 0.24rem;
+                }
+                @include phones {
+                    height: 0.17rem;
+                }
+            }
+            &::-moz-range-track {
+                height: 0.25rem;
+                @include tablets {
+                    height: 0.24rem;
+                }
+                @include phones {
+                    height: 0.17rem;
+                }
+            }
+            @include tablets {
+                width: 26.48rem;
+                height: 0.24rem;
+            }
+            @include phones {
+                width: 18.82rem;
+                height: 0.17rem;
+            }
+        }
+        &-progress {
+            position: absolute;
+            left: 0;
+            top: 11px;
+            height: 0.25rem;
+            width: 0%;
+            background: #151515;
+            box-shadow: 0px -11px 0px 0px #e01f3d;
+            @include tablets {
+                height: 0.24rem;
+            }
+            @include phones {
+                height: 0.17rem;
+            }
+        }
+        /*&-control {
+            background: url("../../images/control.svg") no-repeat;
+            position: absolute;
+            left: 0;
+            top: -4px;
+            width: 15px;
+            height: 15px;
+        }*/
+    }
+    &__sound {
+        display: flex;
+        align-items: center;
+        margin-right: 1.44rem;
+        @include phones {
+            margin-left: 0.74rem;
+            margin-right: 0.54rem;
+        }
+        &-img {
+            margin-right: 1.25rem;
+        }
+        &-volume {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &-level {
+                width: 3.88rem;
+                cursor: pointer;
+                height: 0.33rem;
+                &::-webkit-slider-runnable-track {
+                    height: 0.33rem;
+                    @include tablets {
+                        height: 0.3rem;
+                    }
+                    @include phones {
+                        height: 0.21rem;
+                    }
+                }
+                &::-webkit-slider-thumb {
+                    margin-top: -2.5px;
+                    @include tablets {
+                        margin-top: -3.5px;
+                    }
+                }
+                @include tablets {
+                    width: 3.71rem;
+                    height: 0.24rem;
+                }
+                @include phones {
+                    width: 2.63rem;
+                    height: 0.21rem;
+                }
+            }
+        }
+        &-progress {
+            position: absolute;
+            left: 0;
+            top: 0.69rem;
+            height: 0.33rem;
+            width: 0%;
+            background: #151515;
+            box-shadow: 0px -11px 0px 0px #e01f3d;
+            @include tablets {
+                box-shadow: 0px -9.5px 0px 0px #e01f3d;
+                height: 0.3rem;
+            }
+            @include phones {
+                height: 0.21rem;
+                box-shadow: 0px -9px 0px 0px #e01f3d;
+            }
+        }
+    }
+    &__start {
+        position: relative;
+        margin-left: 1rem;
+        border: none;
+        outline: none;
+        width: 0.75rem;
+        height: 1.06rem;
+        background: url(../../images/small-play.svg) center center/contain no-repeat;
+        @include tablets {
+            width: 0.43rem;
+            height: 0.9rem;
+        }
+        @include phones {
+            width: 0.46rem;
+            height: 0.68rem;
+            margin-left: 0.6rem;
+        }
+        .player__start-paused-container {
+            display: none;
+        }
+    }
+}
+
+.player__container--paused {
+    .player__start {
+        background: none;
+        .player__start-paused-container {
+            position: absolute;
+            left: 0;
+            bottom: 0%;
+            display: flex;
+            height: 1rem;
+            width: 0.69rem;
+            @include tablets {
+                width: 0.48rem;
+                height: 0.9rem;
+            }
+            @include phones {
+                width: 0.46rem;
+                height: 0.68rem;
+            }
+        }
+        .player__start-paused-stick {
+            display: inline-block;
+            border-radius: 2px;
+            height: 1rem;
+            width: 0.25rem;
+            background-color: #fff;
+            margin-right: 3px;
+            @include tablets {
+                width: 0.17rem;
+                height: 0.8rem;
+                margin-right: 0.16rem;
+            }
+            @include phones {
+                width: 0.16rem;
+                height: 0.68rem;
+                margin-right: 0.16rem;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.player__sound-img--mute {
+    .player__sound-img-line {
+        display: block;
+    }
+}
+
+.player__range {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &::-webkit-slider-runnable-track {
+        background-color: #333;
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: #e01f3d;
+        cursor: ew-resize;
+        margin-top: -3.5px;
+        @include phones {
+            margin-top: -2px;
+            width: 0.51rem;
+            height: 0.51rem;
+        }
+    }
+    &::-moz-range-track {
+        -moz-appearance: none;
+        background-color: #333;
+        margin: 0;
+    }
+    &::-moz-range-thumb {
+        -moz-appearance: none;
+        border: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: #e01f3d;
+        cursor: ew-resize;
+        margin-top: -3.5px;
+        @include tablets {
+            margin-top: -2.5px;
+            width: 0.59rem;
+            height: 0.59rem;
+        }
+        @include phones {
+            margin-top: -2px;
+            width: 0.51rem;
+            height: 0.51rem;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+﻿.slider {
+    position: relative;
+    background: #F8FAF9;
+    padding: 0 3%;
+    @include tablets {
+        padding: 0;
+    }
+    &::after {
+        content: url('../../images/sl-rect.svg');
+        position: absolute;
+        top: 98.5%;
+        left: 80%;
+        display: block;
+    }
+    &__wrapper {
+        position: relative;
+        .bx-wrapper {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    &__bg-wrapper {
+        max-height: 28.25rem;
+        max-width: 28.25rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        align-self: center;
+        @include tablets {
+            display: flex;
+            align-self: center;
+            max-height: 20.4rem;
+            max-width: 20.4rem;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
+        @include phones {
+            max-height: 21.86rem;
+            max-width: 21.86rem;
+            margin-bottom: 2.1rem;
+        }
+    }
+    &__bg {
+        display: flex;
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    &__img {
+        object-fit: contain;
+    }
+    &__container {
+        width: auto;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        @include tablets {
+            flex-direction: column;
+        }
+        @include phones {
+            max-width: 480px;
+            margin: 0, 3%;
+        }
+    }
+    &__button {
+        position: absolute;
+        top: 43%;
+        border-radius: 2px;
+        @include tablets {
+            top: 10rem;
+            z-index: 3;
+        }
+        &--right {
+            left: 100%;
+            @include tablets {
+                left: 83%;
+            }
+            @include phones {
+                left: 93%;
+            }
+        }
+        &--left {
+            right: 100%;
+            @include tablets {
+                right: 83%;
+            }
+            @include phones {
+                right: 93%;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 26.19rem;
+        @include tablets {
+            max-width: 40.93rem;
+            align-items: center;
+        }
+    }
+    &__title {
+        font-size: 2.25rem;
+        text-align: left;
+        line-height: 1.17;
+        @include tablets {
+            text-align: center;
+            font-size: 1.87rem;
+        }
+        @include phones {
+            padding: 0 5%;
+            font-size: 2rem;
+        }
+    }
+    &__text {
+        max-width: 23rem;
+        @include tablets {
+            font-size: 1.06rem;
+            max-width: 40.93rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        @include phones {
+            padding: 0 5%;
+            font-size: 1.14rem;
+        }
+    }
+    &__features {
+        display: flex;
+        max-width: 15.75rem;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        @include tablets {
+            width: 16.8rem;
+            margin-bottom: 1.5rem;
+            margin-right: 1.2rem;
+        }
+    }
+    &__feature {
+        display: flex;
+        flex-direction: column;
+    }
+    &__feature-name {
+        color: #666;
+        @include tablets {
+            font-size: 1.07rem;
+        }
+    }
+    &__feature-value {
+        font-size: 1.13rem;
+        color: #000;
+        font-weight: 700;
+        @include tablets {
+            font-size: 1.2rem;
+        }
+    }
+    &__order {
+        display: flex;
+        justify-content: space-between;
+        max-width: 20.25rem;
+        align-items: center;
+        margin-bottom: 7px;
+        @include tablets {
+            max-width: 23.93rem;
+        }
+    }
+    &__price {
+        color: #151515;
+        font-size: 2.25rem;
+        @include tablets {
+            font-size: 2.75rem;
+            margin-right: 2.3rem;
+        }
+        @include phones {
+            font-size: 2.29rem;
+            padding-right: 0.5rem;
+        }
+    }
+}

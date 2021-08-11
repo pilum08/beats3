@@ -1,0 +1,17 @@
+.heading {
+    text-align: center;
+}
+
+.heading__subtitle {
+    padding: 0 22%;
+    margin-bottom: 4.38rem;
+    @include tablets {
+        line-height: 1.2;
+        font-size: 1.07rem;
+        padding: 0 14%;
+    }
+    @include phones {
+        font-size: 1.14rem;
+        padding: 0 4.8%;
+    }
+}

@@ -1,0 +1,6 @@
+﻿.logo {
+    margin-left: 15px;
+    @include tablets {
+        margin-left: 0;
+    }
+}
